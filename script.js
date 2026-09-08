@@ -1,28 +1,20 @@
 const products = [
-  { name: "Shirt", category: "Clothing", price: 1000 },
-  { name: "Headphone", category: "Electronics", price: 2000 },
-  { name: "Mouse", category: "Electronics", price: 500 },
-  { name: "Book", category: "Books", price: 300 }
+  { name: "iPhone 15 Pro", price: 120000 },
+  { name: "Samsung Galaxy S24", price: 110000 },
+  { name: "MacBook Pro", price: 150000 },
+  { name: "AirPods Max", price: 50000 }
 ];
 
+const searchQuery = "pro";
+let small = searchQuery.toLowerCase()
 let arr = [];
-let sum;
 products.forEach((item)=>{
-    if(item.category === "Electronics"){
-    let discountPrice = (item.price * 10 ) / 100;
-     sum = item.price - discountPrice;
-        item.price = sum;
-        
+    let smalLettter = item.name.toLowerCase()
+    if(smalLettter.includes(small)){
+        arr.push(item)
     }
-    arr.push(item)
 })
 console.log(arr);
-
-
-
-
-
-
 
 
 
