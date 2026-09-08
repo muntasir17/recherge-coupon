@@ -1,17 +1,18 @@
 const cart = [
-  { name: "Mouse", price: 500, inStock: true },
-  { name: "Keyboard", price: 1500, inStock: true },
-  { name: "Monitor", price: 12000, inStock: false }
+  { id: 101, name: "Shirt", price: 500 },
+  { id: 102, name: "Pants", price: 800 },
+  { id: 103, name: "Shoes", price: 1200 }
 ];
-cart.forEach((item)=>{
-  if(item.inStock === true){
-    console.log(`Order Ready!`);
-  }else{
-    console.log(`Cannot Place Order: Out of Stock Items Present!`);
-  }
+
+const removeId = 102;
+let arr = [];
+
+cart.filter((item)=>{
+    if(item.id !== removeId){
+        arr.push(item)
+    }
 })
-
-
+console.log(arr);
 
 
 
