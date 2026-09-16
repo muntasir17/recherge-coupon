@@ -22,8 +22,6 @@
 <br>
 
 <div class="max-w-sm w-full bg-white rounded-3xl shadow-xl p-6 border border-slate-200 text-center space-y-6">
-    
-    <!-- Card Header -->
     <div>
       <span class="inline-block px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-semibold uppercase tracking-wider mb-2">
         Recharge Voucher
@@ -31,16 +29,10 @@
       <h2 class="text-2xl font-bold text-slate-800">Scratch & Recharge</h2>
       <p class="text-xs text-slate-500 mt-1">Scratch the silver box below to reveal your 12-digit PIN code.</p>
     </div>
-
-    <!-- Scratch Box Area -->
     <div class="relative w-full h-24 bg-gradient-to-r from-red-500 to-rose-600 rounded-2xl flex items-center justify-center shadow-inner overflow-hidden select-none">
-      
-      <!-- Hidden PIN Code (Beneath Canvas) -->
-      <span id="secretPin" class="text-2xl font-mono font-bold tracking-widest text-white select-none">
+      <span id="secretPin" class="num text-2xl font-mono font-bold tracking-widest text-white select-none">
         4829 1058 3920
       </span>
-
-      <!-- Interactive Canvas Layer -->
       <canvas id="scratchCanvas" class="absolute top-0 left-0 w-full h-full cursor-pointer rounded-2xl"></canvas>
     </div>
     <div class="space-y-3 pt-2">
@@ -48,25 +40,12 @@
         Enter 12-Digit PIN:
       </label>
       
-      <div class="flex gap-2">
-        <input 
-          type="number" 
-          id="pinInput" 
-          placeholder="Enter PIN number" 
-          class="inpFiels flex-1 h-12 border border-slate-300 rounded-xl px-4 outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-slate-800 transition text-sm font-mono"
-        >
-        <button 
-          id="submitBtn" 
-          class="btn bg-red-500 hover:bg-red-600 active:scale-95 text-white font-medium rounded-xl px-5 h-12 text-base cursor-pointer transition shadow-md shadow-red-200"
-        >
-          Send
-        </button>
+  <div class="flex gap-2">
+  <input type="number" id="pinInput" placeholder="Enter PIN number" class="inpFiels flex-1 h-12 border border-slate-300 rounded-xl px-4 outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent text-slate-800 transition text-sm font-mono">
+<button id="submitBtn" class="btn bg-red-500 hover:bg-red-600 active:scale-95 text-white font-medium rounded-xl px-5 h-12 text-base cursor-pointer transition shadow-md shadow-red-200"> Send</button>
       </div>
     </div>
-
-    <!-- Status & Output Section -->
     <div class="pt-1 min-h-[48px] flex flex-col justify-center">
-      <h1 class="num text-xs text-slate-400"></h1>
       <h1 class="res text-center text-base font-bold transition-all"></h1>
     </div>
 
